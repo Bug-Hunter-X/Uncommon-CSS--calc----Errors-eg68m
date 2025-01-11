@@ -1,0 +1,8 @@
+The solution involves ensuring proper spacing within the `calc()` function when combining different units and operators. Also, ensure all units involved in the `calc()` function are compatible or can be easily converted to a common unit to avoid browser misinterpretations. For example, the following code demonstrates the correct usage:
+
+```css
+.element {width: calc(50% + 10px);}
+.anotherElement { height: calc(100vh - 50px); }
+```
+
+In the first example, there's a space before and after the `+` operator. In the second example, we are using compatible units (`vh` and `px`). Always ensure the units in your `calc()` functions are compatible or can be converted for reliable results.
