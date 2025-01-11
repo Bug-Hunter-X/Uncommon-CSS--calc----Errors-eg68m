@@ -1,0 +1,20 @@
+The CSS property `calc()` is used to perform calculations within CSS. However, a common error arises when using the `calc()` function with percentages and other units without proper spacing. For example, the following code will produce unexpected results:
+
+```css
+.element {width:calc(50%+10px);}
+```
+
+The correct way to use this is:
+
+```css
+.element {width: calc(50% + 10px);}
+```
+Notice the spaces added before and after the `+` operator. Without the spacing, the browser might interpret it incorrectly.
+
+Another error involves using `calc()` with different units without the correct calculation. For example:
+
+```css
+.element {width:calc(50%+10em);}
+```
+
+The browser may not correctly convert `50%` and `10em` to a common unit. Ensure that units are compatible for correct calculations.
